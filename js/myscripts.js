@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', event => {
     //alert(document.URL);
 
     //var p1 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p1/index.html"
-    //var p2 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p2/index.html"
+    ////var p2 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p2/index.html"
 
     var p2 = "https://shadeika15.github.io/my_website/p2/index.html"
 
@@ -114,28 +114,27 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
         document.getElementById("total_quantity").innerHTML=localStorage.getItem("cart_numKey");
-        
         document.getElementById("total").innerHTML = String(10000 * parseInt(localStorage.getItem("cart_numKey")));
-
-        document.getElementById("totalAfterTax").innerHTML = String( (0.15 * 10000 * parseInt(localStorage.getItem("cart_numKey"))) + (10000 * parseInt(localStorage.getItem("cart_numKey"))) )
+        document.getElementById("totalAfterTax").innerHTML = String( (0.15 * 10000 * parseInt(localStorage.getItem("cart_numKey"))) 
+        + (10000 * parseInt(localStorage.getItem("cart_numKey"))) )
        
 
+        document.getElementById("quantityP").innerHTML=localStorage.getItem("cart_numKey");
+
+        document.getElementById("redP").innerHTML=localStorage.getItem("red_numKey");
+        document.getElementById("blueP").innerHTML=localStorage.getItem("blue_numKey");
+        document.getElementById("greenP").innerHTML=localStorage.getItem("green_numKey");
+        document.getElementById("yellowP").innerHTML=localStorage.getItem("yellow_numKey");
+
+        document.getElementById("total_quantityP").innerHTML=localStorage.getItem("cart_numKey");
+        document.getElementById("totalP").innerHTML = String(10000 * parseInt(localStorage.getItem("cart_numKey")));
+        document.getElementById("totalAfterTaxP").innerHTML = String( (0.15 * 10000 * parseInt(localStorage.getItem("cart_numKey"))) 
+        + (10000 * parseInt(localStorage.getItem("cart_numKey"))) )
+
     }
     
     
-    const element_purchase = document.getElementById("btnp");
-    element_purchase.addEventListener("click", purchaseFunc);
 
-
-    function purchaseFunc()
-    {
-        alert("a purchase has been made");
-        document.getElementById("quantityR").innerHTML="dekie";
-    }
-   
-    document.getElementById("quantityR").innerHTML="dekie";
-    
-    alert("defo");
     
 
 });
