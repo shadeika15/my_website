@@ -119,7 +119,8 @@ window.addEventListener('DOMContentLoaded', event => {
         + (10000 * parseInt(localStorage.getItem("cart_numKey"))) )
        
 
-        document.getElementById("quantityP").innerHTML=localStorage.getItem("cart_numKey");
+        //document.getElementById("quantityP").innerHTML=localStorage.getItem("cart_numKey");
+        document.getElementById("quantityP").innerHTML="dekie";
 
         document.getElementById("redP").innerHTML=localStorage.getItem("red_numKey");
         document.getElementById("blueP").innerHTML=localStorage.getItem("blue_numKey");
