@@ -3,8 +3,14 @@
 window.addEventListener('DOMContentLoaded', event => {
     
     var now = String(window.location.href)
+    alert(now)
+
     //var p1 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p1/index.html"
     var p2 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p2/index.html"
+    //var p2 = "https://shadeika15.github.io/my_website/p2/index.html"
+
+
+    
 
     
 
@@ -17,29 +23,29 @@ window.addEventListener('DOMContentLoaded', event => {
         var green_num = 0;
         var yellow_num = 0;
 
-        //sessionStorage
-        //localStorage
 
-        sessionStorage.setItem("cart_numKey", cart_num);
+        localStorage.setItem("cart_numKey", cart_num);
 
-        sessionStorage.setItem("red_numKey", red_num);
-        sessionStorage.setItem("blue_numKey", blue_num);
-        sessionStorage.setItem("green_numKey", green_num);
-        sessionStorage.setItem("yellow_numKey", yellow_num);
+        localStorage.setItem("red_numKey", red_num);
+        localStorage.setItem("blue_numKey", blue_num);
+        localStorage.setItem("green_numKey", green_num);
+        localStorage.setItem("yellow_numKey", yellow_num);
+        //alert("dont update");
 
     }
     else
     {
+        //alert("update");
         updateCart();
     }
     
     
-    cart_num = sessionStorage.getItem("cart_numKey");
+    cart_num = localStorage.getItem("cart_numKey");
 
-    red_num = sessionStorage.getItem("red_numKey");
-    blue_num = sessionStorage.getItem("blue_numKey");
-    green_num = sessionStorage.getItem("green_numKey");
-    yellow_num = sessionStorage.getItem("yellow_numKey");
+    red_num = localStorage.getItem("red_numKey");
+    blue_num = localStorage.getItem("blue_numKey");
+    green_num = localStorage.getItem("green_numKey");
+    yellow_num = localStorage.getItem("yellow_numKey");
 
 
 
@@ -49,10 +55,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
     function addFunctionRed() {
         cart_num++;
-        sessionStorage.setItem("cart_numKey", cart_num);
+        localStorage.setItem("cart_numKey", cart_num);
         document.getElementById("cart").innerHTML=cart_num;
         red_num++;
-        sessionStorage.setItem("red_numKey", red_num);
+        localStorage.setItem("red_numKey", red_num);
         document.getElementById("red").innerHTML=red_num;
     }
 
@@ -61,10 +67,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
     function addFunctionBlue() {
         cart_num++;
-        sessionStorage.setItem("cart_numKey", cart_num);
+        localStorage.setItem("cart_numKey", cart_num);
         document.getElementById("cart").innerHTML=cart_num;
         blue_num++;
-        sessionStorage.setItem("blue_numKey", blue_num);
+        localStorage.setItem("blue_numKey", blue_num);
         document.getElementById("blue").innerHTML=blue_num;
     }
 
@@ -73,10 +79,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
     function addFunctionGreen() {
         cart_num++;
-        sessionStorage.setItem("cart_numKey", cart_num);
+        localStorage.setItem("cart_numKey", cart_num);
         document.getElementById("cart").innerHTML=cart_num;
         green_num++;
-        sessionStorage.setItem("green_numKey", green_num);
+        localStorage.setItem("green_numKey", green_num);
         document.getElementById("green").innerHTML=green_num;
       
     }
@@ -86,29 +92,29 @@ window.addEventListener('DOMContentLoaded', event => {
 
     function addFunctionYellow() {
         cart_num++;
-        sessionStorage.setItem("cart_numKey", cart_num);
+        localStorage.setItem("cart_numKey", cart_num);
         document.getElementById("cart").innerHTML=cart_num;
         yellow_num++;
-        sessionStorage.setItem("yellow_numKey", yellow_num);
+        localStorage.setItem("yellow_numKey", yellow_num);
         document.getElementById("yellow").innerHTML=yellow_num;
     }
 
     
     function updateCart(){
 
-        document.getElementById("quantity").innerHTML=sessionStorage.getItem("cart_numKey");
+        document.getElementById("quantity").innerHTML=localStorage.getItem("cart_numKey");
 
-        document.getElementById("red").innerHTML=sessionStorage.getItem("red_numKey");
-        document.getElementById("blue").innerHTML=sessionStorage.getItem("blue_numKey");
-        document.getElementById("green").innerHTML=sessionStorage.getItem("green_numKey");
-        document.getElementById("yellow").innerHTML=sessionStorage.getItem("yellow_numKey");
+        document.getElementById("red").innerHTML=localStorage.getItem("red_numKey");
+        document.getElementById("blue").innerHTML=localStorage.getItem("blue_numKey");
+        document.getElementById("green").innerHTML=localStorage.getItem("green_numKey");
+        document.getElementById("yellow").innerHTML=localStorage.getItem("yellow_numKey");
 
 
-        document.getElementById("total_quantity").innerHTML=sessionStorage.getItem("cart_numKey");
+        document.getElementById("total_quantity").innerHTML=localStorage.getItem("cart_numKey");
         
-        document.getElementById("total").innerHTML = String(10000 * parseInt(sessionStorage.getItem("cart_numKey")));
+        document.getElementById("total").innerHTML = String(10000 * parseInt(localStorage.getItem("cart_numKey")));
 
-        document.getElementById("totalAfterTax").innerHTML = String( (0.15 * 10000 * parseInt(sessionStorage.getItem("cart_numKey"))) + (10000 * parseInt(sessionStorage.getItem("cart_numKey"))) )
+        document.getElementById("totalAfterTax").innerHTML = String( (0.15 * 10000 * parseInt(localStorage.getItem("cart_numKey"))) + (10000 * parseInt(localStorage.getItem("cart_numKey"))) )
        
 
     }
