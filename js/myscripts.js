@@ -3,10 +3,13 @@
 window.addEventListener('DOMContentLoaded', event => {
     
     var now = String(window.location.href)
-    alert(now)
+    alert(now);
+    //alert("now");
+    alert(document.URL);
 
     //var p1 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p1/index.html"
     var p2 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p2/index.html"
+
     //var p2 = "https://shadeika15.github.io/my_website/p2/index.html"
 
 
