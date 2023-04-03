@@ -112,15 +112,13 @@ window.addEventListener('DOMContentLoaded', event => {
         document.getElementById("green").innerHTML=localStorage.getItem("green_numKey");
         document.getElementById("yellow").innerHTML=localStorage.getItem("yellow_numKey");
 
-
         document.getElementById("total_quantity").innerHTML=localStorage.getItem("cart_numKey");
         document.getElementById("total").innerHTML = String(10000 * parseInt(localStorage.getItem("cart_numKey")));
         document.getElementById("totalAfterTax").innerHTML = String( (0.15 * 10000 * parseInt(localStorage.getItem("cart_numKey"))) 
         + (10000 * parseInt(localStorage.getItem("cart_numKey"))) )
        
 
-        //document.getElementById("quantityP").innerHTML=localStorage.getItem("cart_numKey");
-        document.getElementById("quantityP").innerHTML="dekie";
+        document.getElementById("quantityP").innerHTML=localStorage.getItem("cart_numKey");
 
         document.getElementById("redP").innerHTML=localStorage.getItem("red_numKey");
         document.getElementById("blueP").innerHTML=localStorage.getItem("blue_numKey");
@@ -139,7 +137,3 @@ window.addEventListener('DOMContentLoaded', event => {
     
 
 });
-
-//$(function () {
-    //alert("working")
-//});
