@@ -2,79 +2,65 @@
 
 window.addEventListener('DOMContentLoaded', event => {
     
-    var now = String(window.location.href)
+    //var now = String(window.location.href)
     //alert(now);
-    //alert("now");
-    //alert(document.URL);
 
-    //var p1 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p1/index.html"
     ////var p2 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p2/index.html"
-
     var p2 = "https://shadeika15.github.io/my_website/p2/index.html"
-
-
-    
-
-    
 
     if(now!==p2)
     {
 
         var cart_num = 0;
-        var red_num = 0;
-        var blue_num = 0;
+        var black_num = 0;
+        var pink_num = 0;
         var green_num = 0;
-        var yellow_num = 0;
-
+        var orange_num = 0;
 
         localStorage.setItem("cart_numKey", cart_num);
 
-        localStorage.setItem("red_numKey", red_num);
-        localStorage.setItem("blue_numKey", blue_num);
+        localStorage.setItem("black_numKey", black_num);
+        localStorage.setItem("pink_numKey", pink_num);
         localStorage.setItem("green_numKey", green_num);
-        localStorage.setItem("yellow_numKey", yellow_num);
-        //alert("dont update");
+        localStorage.setItem("orange_numKey", orange_num);
 
     }
     else
     {
-        //alert("update");
         updateCart();
     }
     
     
     cart_num = localStorage.getItem("cart_numKey");
 
-    red_num = localStorage.getItem("red_numKey");
-    blue_num = localStorage.getItem("blue_numKey");
+    black_num = localStorage.getItem("black_numKey");
+    pink_num = localStorage.getItem("pink_numKey");
     green_num = localStorage.getItem("green_numKey");
-    yellow_num = localStorage.getItem("yellow_numKey");
+    orange_num = localStorage.getItem("orange_numKey");
 
 
+    const element_black = document.getElementById("add_btn_black");
+    element_black.addEventListener("click", addFunctionBlack);
 
-
-    const element_red = document.getElementById("add_btn_red");
-    element_red.addEventListener("click", addFunctionRed);
-
-    function addFunctionRed() {
+    function addFunctionBlack() {
         cart_num++;
         localStorage.setItem("cart_numKey", cart_num);
         document.getElementById("cart").innerHTML=cart_num;
-        red_num++;
-        localStorage.setItem("red_numKey", red_num);
-        document.getElementById("red").innerHTML=red_num;
+        black_num++;
+        localStorage.setItem("black_numKey", black_num);
+        document.getElementById("black").innerHTML=black_num;
     }
 
-    const element_blue = document.getElementById("add_btn_blue");
-    element_blue.addEventListener("click", addFunctionBlue);
+    const element_pink = document.getElementById("add_btn_pink");
+    element_pink.addEventListener("click", addFunctionPink);
 
-    function addFunctionBlue() {
+    function addFunctionPink() {
         cart_num++;
         localStorage.setItem("cart_numKey", cart_num);
         document.getElementById("cart").innerHTML=cart_num;
-        blue_num++;
-        localStorage.setItem("blue_numKey", blue_num);
-        document.getElementById("blue").innerHTML=blue_num;
+        pink_num++;
+        localStorage.setItem("pink_numKey", pink_num);
+        document.getElementById("pink").innerHTML=pink_num;
     }
 
     const element_green = document.getElementById("add_btn_green");
@@ -90,27 +76,26 @@ window.addEventListener('DOMContentLoaded', event => {
       
     }
 
-    const element_yellow = document.getElementById("add_btn_yellow");
-    element_yellow.addEventListener("click", addFunctionYellow);
+    const element_orange = document.getElementById("add_btn_orange");
+    element_orange.addEventListener("click", addFunctionorange);
 
-    function addFunctionYellow() {
+    function addFunctionorange() {
         cart_num++;
         localStorage.setItem("cart_numKey", cart_num);
         document.getElementById("cart").innerHTML=cart_num;
-        yellow_num++;
-        localStorage.setItem("yellow_numKey", yellow_num);
-        document.getElementById("yellow").innerHTML=yellow_num;
+        orange_num++;
+        localStorage.setItem("orange_numKey", orange_num);
+        document.getElementById("orange").innerHTML=orange_num;
     }
 
-    
     function updateCart(){
 
         document.getElementById("quantity").innerHTML=localStorage.getItem("cart_numKey");
 
-        document.getElementById("red").innerHTML=localStorage.getItem("red_numKey");
-        document.getElementById("blue").innerHTML=localStorage.getItem("blue_numKey");
+        document.getElementById("black").innerHTML=localStorage.getItem("black_numKey");
+        document.getElementById("pink").innerHTML=localStorage.getItem("pink_numKey");
         document.getElementById("green").innerHTML=localStorage.getItem("green_numKey");
-        document.getElementById("yellow").innerHTML=localStorage.getItem("yellow_numKey");
+        document.getElementById("orange").innerHTML=localStorage.getItem("orange_numKey");
 
         document.getElementById("total_quantity").innerHTML=localStorage.getItem("cart_numKey");
         document.getElementById("total").innerHTML = String(10000 * parseInt(localStorage.getItem("cart_numKey")));
@@ -120,10 +105,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
         document.getElementById("quantityP").innerHTML=localStorage.getItem("cart_numKey");
 
-        document.getElementById("redP").innerHTML=localStorage.getItem("red_numKey");
-        document.getElementById("blueP").innerHTML=localStorage.getItem("blue_numKey");
+        document.getElementById("blackP").innerHTML=localStorage.getItem("black_numKey");
+        document.getElementById("pinkP").innerHTML=localStorage.getItem("pink_numKey");
         document.getElementById("greenP").innerHTML=localStorage.getItem("green_numKey");
-        document.getElementById("yellowP").innerHTML=localStorage.getItem("yellow_numKey");
+        document.getElementById("orangeP").innerHTML=localStorage.getItem("orange_numKey");
 
         document.getElementById("total_quantityP").innerHTML=localStorage.getItem("cart_numKey");
         document.getElementById("totalP").innerHTML = String(10000 * parseInt(localStorage.getItem("cart_numKey")));
@@ -132,8 +117,4 @@ window.addEventListener('DOMContentLoaded', event => {
 
     }
     
-    
-
-    
-
 });
