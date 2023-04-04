@@ -1,16 +1,12 @@
-
-
 window.addEventListener('DOMContentLoaded', event => {
     
-    //var now = String(window.location.href)
-    //alert(now);
+    var now = String(window.location.href)
 
     ////var p2 = "file:///C:/Users/Romari/OneDrive/Desktop/website/p2/index.html"
     var p2 = "https://shadeika15.github.io/my_website/p2/index.html"
 
     if(now!==p2)
     {
-
         var cart_num = 0;
         var black_num = 0;
         var pink_num = 0;
@@ -23,13 +19,11 @@ window.addEventListener('DOMContentLoaded', event => {
         localStorage.setItem("pink_numKey", pink_num);
         localStorage.setItem("green_numKey", green_num);
         localStorage.setItem("orange_numKey", orange_num);
-
     }
     else
     {
         updateCart();
     }
-    
     
     cart_num = localStorage.getItem("cart_numKey");
 
@@ -37,7 +31,6 @@ window.addEventListener('DOMContentLoaded', event => {
     pink_num = localStorage.getItem("pink_numKey");
     green_num = localStorage.getItem("green_numKey");
     orange_num = localStorage.getItem("orange_numKey");
-
 
     const element_black = document.getElementById("add_btn_black");
     element_black.addEventListener("click", addFunctionBlack);
@@ -77,9 +70,9 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
     const element_orange = document.getElementById("add_btn_orange");
-    element_orange.addEventListener("click", addFunctionorange);
+    element_orange.addEventListener("click", addFunctionOrange);
 
-    function addFunctionorange() {
+    function addFunctionOrange() {
         cart_num++;
         localStorage.setItem("cart_numKey", cart_num);
         document.getElementById("cart").innerHTML=cart_num;
